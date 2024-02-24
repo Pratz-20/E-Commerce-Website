@@ -1,0 +1,109 @@
+.nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(14, 173, 185);
+    color:white;
+    /* flex-wrap: wrap; */
+    padding: 20px 604x;
+    box-shadow: 0 4px 10px rgb(94, 92, 92, 0.5);
+    z-index: 1000;
+
+}
+.bar {
+    position: absolute;
+    left: 10%;
+    font-size: 20px;
+    visibility: hidden;
+}
+.bar:hover{
+    transform: rotate(90deg);
+    transition: 1s ease-in-out;
+}
+.bar:hover ~ .nav_ul{
+    visibility: visible;
+}
+.nav_logo{
+    width: 15%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    margin:0px;
+    padding: 0px 10px;
+    
+}
+.nav_ul li{
+    position: relative;
+    flex-shrink: 2;
+    padding: 0 10px;
+    margin: 0;
+   
+}
+.nav_ul li a{
+    padding:0 20px;
+    font-size: 1.7rem;   /* conver to rem */  
+    color:white;
+    text-decoration: none;
+    transition: .5s;
+    /* overflow: hidden; */
+}
+.nav_ul li::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    left: 12px;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: center;
+    background-color: black;
+    border-radius: 20px;
+    /* visibility: hidden; */
+    transition: .7s;
+}
+.nav_ul li:hover::after{
+    transform: scaleX(1);
+    background-color: white;
+    
+}
+.nav_ul li a:hover{
+
+    color:black;
+}
+.counter{
+   
+
+    height:1.5em;
+    width:1.5em;
+    position:absolute;
+    display: flex;
+    z-index: 3;
+    top: -15px;
+    left: 20px;
+    background-color: white;
+    border-radius: 50%;
+    color:rgb(14, 173, 185) ;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.cartSymbol{ 
+    transform:rotateY(180);
+}
+

@@ -1,0 +1,332 @@
+/* nav bar css */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    position: relative;
+}
+
+/* /features css */
+.features_container{
+    padding: 2.5%;
+}
+.features_container ul{
+    position: relative;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    align-content: space-around;
+}
+.features_container li{
+   list-style: none; 
+   margin-top: 20px;  
+}
+
+.fea_box {
+    height: 150px;
+    width: 150px ;
+    border-radius: 5px;
+    padding:15px;
+    margin: 20px  20px 0 0;
+    box-shadow: 2px 2px 4px gray, -2px -2px 5px  rgb(197, 196, 196);
+}
+
+.fea_box:hover{
+    box-shadow: 4px 4px 8px gray, -4px -4px 5px  rgb(152, 149, 149);
+    
+}
+
+.fea_box .fea_img{
+    /* background-image: url('./components/Images/features/f1.png'); */
+    background-repeat: no-repeat;
+    background-position: cover;
+    width: 100%;
+    height: 80%;
+}
+.fea_box .fea_text{
+  text-align: center;
+  padding: 3px 0;
+  height: 25px;
+  width: 100%;
+  background-color: rgb(105, 192, 198);
+  color:black;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 30vh;
+     /* border: 1px solid black;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("../../public/Images/banner/b4.jpg"); */
+    background-size: cover;
+    background-position-y: 50% ;
+    background-repeat: no-repeat;
+    color: white;
+} 
+
+
+/* footer css */
+
+.newsletter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(105, 192, 198); 
+    height: 20vh;
+    margin: 40px 0px;
+}
+
+.newstext {
+    width: 40%;
+}
+.newsletter .form{
+    width: 50%;
+
+}
+.newsletter .form input {
+    height: 30px;
+    width: 70%;
+    font-weight: 600;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.newsletter .form button{
+    outline: none;
+    height: 33px;
+    width: 25%;
+    border-radius: 5px;
+    margin-left: 3px;
+    border: 1px solid darkgray;
+    font-weight: 600;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.footer a{
+    color: black;
+}
+.footer .col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 5px 0;
+
+}
+
+.footer .col a, .footer .col p{
+    margin: 5px 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+}
+
+.footer a{
+   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .App .nav{
+        padding: 0 30px;
+    }
+   .App .nav .nav_ul li a{
+        font-size: 1.2em; 
+        padding: 0 10px;
+    }
+    .App .nav a{
+        font-size: 12px;
+    }
+    .App .nav div a .cartSymbol .counter{
+        height: 1.2em;
+        width: 1.2em;
+        top: -11px;
+        left: 18px;
+    }
+    .App .hero {
+        background-position: -150% 10%;
+    }
+    .App .hero .hero_text{
+        left: 5%;
+    }
+    .App .hero .hero_text .heading{
+        font-size: 40px;
+    }
+    .App .features_container .fea_box{
+        padding: 10px;
+    }
+    .App .blog_container .blog-box .blog-info .p1{
+        font-size: 1.5em;
+    }
+    .App .blog_container .blog-box .blog-info .p2, .App .blog_container .blog-box .blog-info .p3{
+        font-size: 1em;
+    }
+    .App .newsletter .newstext span h2{
+        font-size: 1.2em;
+    }
+    
+    .App .footer .col p ,.App .footer .col a{
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .App .contact-details, .App .form_details{
+        padding: 50px;
+        align-items: center;
+    }
+    .App .contact-details .info h2{
+        font-size: 1.2em;
+    }
+    .App .contact-details .info h3, .App .contact-details div li p{
+        font-size: 1em;
+    }
+    .App .form_details .people div p, .App .newsletter .newstext p {
+        font-size: .9em;
+        margin: 5px 0;
+    }
+    .App .list_container .list_item  h3{
+        font-size: 1em ;
+        font-weight: 500;
+    }
+   
+}
+
+@media only screen and (max-width: 430px) {
+    .App .nav {
+        padding: 0;
+        
+    }
+    .App .nav .bar{
+        visibility: visible;
+    }
+    .App .nav .nav_ul{
+        position: absolute;
+        background-color: rgb(14, 173, 185);;
+        flex-direction: column;
+        height: 40vh;
+        width: 30%;
+        left: 0;
+        top: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 0 0 10px 0;
+        box-shadow: 0 4px 10px rgb(94, 92, 92, 0.5);
+        z-index: -3;
+        visibility: hidden;
+        transition: 1s ease-in-out;
+    }
+    .App .nav .nav_logo{
+        width: 30%;
+    }
+    .App .hero{
+        background-position: 50%;
+    }
+    .App .hero .hero_text{
+        left: 2%;
+        top: 40%;
+        
+    }
+    .App .hero .hero_text .heading {
+        font-size: 2em;
+    }
+    .App .hero .hero_text .subheading,.App .hero .hero_text .btn {
+        font-size: 1em;
+    }
+    .App .product_gallery .product_card {
+        width: 230px;
+    }
+    .App .newsletter {
+        padding: 10px 20px;
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .App .newsletter .newstext,.App .newsletter .form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .App .shop .section_heading h1 {
+        font-size: 40px;
+    }
+    .App .blog_container, .App .list_container {
+        padding: 20px 0;
+        margin: 0;
+      
+       
+    }
+    .App .blog_container .blog-box {
+        width: 90%;
+        margin: 15% 0;
+    }
+    .App .blog_container .blog-box .blog-info .p1{
+        font-size: 1.1em;
+    }
+    .App .blog_container .blog-box .blog-info .p2 ~ .p3{
+        font-size: .9em;
+    }
+    .App .about_container, .App .contact-details, .App .form_details{
+        flex-direction: column;
+        padding: 80px 50px;
+       
+    }
+    .App .about_container .about_img ,.App .about_container .about_info, .App .form_details form , .App .form_details .people{
+        width: 100%;
+
+    }
+    .App .contact-details .info, .App .contact-details iframe,.App .form_details form , .App .form_details .people{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .App .list_container .list_item{
+        width: 90%;
+        
+    }
+    .App .list_container .list_item h3,.App .list_container .list_item .price{
+        width: 20%;
+        text-align: center;
+    }
+    .App .list_container .list_item h3, .App .list_container .list_item div{
+        font-size: .9em;
+        margin-right: 5px;
+        text-align: center;
+        
+    }
+    .App .list_container .list_item .counter{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+    }
+    .App .list_container .list_item .counter button {
+        font-size: 12px;
+    }
+    
+   
+}
+
+
+
